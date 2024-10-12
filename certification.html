@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certification</title>
+    <link rel="stylesheet" href="css/styles.css">
+	<style>
+        #animateBox {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            transition: background-color 0.5s ease; /* Smooth color change */
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+<img src="images/java.png"alt="myimages" width="500" height="300">
+<img src="images/python.png"alt="python" width="400" height="300">
+    
+</body>
+</html>
+
+<script>
+        const box = document.getElementById('animateBox');
+        let position = 0;
+        let direction = 1;
+
+        function animateBox() {
+            // Move the box horizontally across the screen
+            position += 2 * direction;
+            box.style.left = position + 'px';
+
+            // Reverse direction when the box reaches the edges of the screen
+            if (position >= window.innerWidth - 100 || position <= 0) {
+                direction *= -1;
+                box.style.backgroundColor = direction === 1 ? 'blue' : 'green'; // Change color
+            }
+
+            requestAnimationFrame(animateBox); // Repeat animation on the next frame
+        }
+
+        // Start the animation when the page loads
+        animateBox();
+    </script>

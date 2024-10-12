@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Icon</title>
+    <style>
+        .github-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .github-icon:hover {
+            transform: scale(1.2); /* Enlarge the icon on hover */
+        }
+    </style>
+</head>
+<body>
+<img src="images/13131628_10207848531025401_8339302869838951407_o.jpg" alt="my photo" width="400" height="300"> 
+    <a href="https://github.com/mileiny1" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" class="github-icon">
+    </a>
+
+    <script>
+        const githubIcon = document.querySelector('.github-icon');
+        githubIcon.addEventListener('click', function() {
+            alert('You clicked the GitHub icon!');
+        });
+    </script>
+
+</body>
+</html>
+
+     
